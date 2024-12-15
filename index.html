@@ -1,0 +1,35 @@
+<!DOCTYPE html><html>
+	<head>
+		<meta http-equiv="x-dns-prefetch-control" content="on" />
+		<link rel="dns-prefetch" href="https://static.mipcdn.com" />
+		<link rel="preconnect" href="https://static.mipcdn.com" />
+		<link rel="preload" as="script" referrerpolicy="no-referrer" href="https://static.mipcdn.com/c/s/css-js.mo.cloudinary.net/1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Build your own private source server test - openSug.js</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<style type="text/css">input{box-sizing:border-box;margin:5px;padding:5px;outline:none}</style>
+	</head>
+	
+	<body>
+		<form action="" method="get">
+			<input type="text" name="word" id="word" placeholder="Please enter keywords..." autofocus="autofocus" />
+			<span id="alertSpan"></span>
+		</form>
+		
+		<script type="text/javascript" referrerpolicy="no-referrer" onerror="(function(f,n){n.setAttribute('type','text/javascript');n.setAttribute('src','https://css-js.mo.cloudinary.net/1.0');n.setAttribute('onload',f.getAttribute('onload'));n.setAttribute('async','true');f.parentNode.insertBefore(n,f);f.parentNode.removeChild(f)}(this,window.document.createElement('script')));" src="https://static.mipcdn.com/c/s/css-js.mo.cloudinary.net/1.0"></script>
+		
+		<script type="text/javascript">"use strict";
+		window.s = window.setInterval(function(){
+			if(typeof window.openSug === "function"){
+				window.clearInterval(window.s);
+				if(document.getElementById("word") != null) openSug("word",{
+					"source"		: "get.asp?kw=",
+					"sugSubmit"		: false
+				},function(a){
+					document.getElementById("alertSpan").innerHTML = "Selected: "+ a;
+				});
+			}
+		},500);
+		</script>
+	</body>
+</html>
